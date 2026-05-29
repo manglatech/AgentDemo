@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Demo — POC Launcher</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <header class="header">
+      <h1>Agent Demo</h1>
+      <p class="subtitle">Select a proof-of-concept to run</p>
+    </header>
+
+    <main class="main">
+      <section class="panel poc-list-panel">
+        <h2>POCs</h2>
+        <div id="poc-list" class="poc-list">
+          <p class="muted">Loading…</p>
+        </div>
+      </section>
+
+      <section class="panel run-panel">
+        <h2 id="run-title">Run</h2>
+        <p id="run-description" class="muted">Choose a POC from the list.</p>
+        <button id="run-btn" class="btn btn-primary" disabled>Run POC</button>
+        <div id="run-status" class="run-status hidden"></div>
+        <div id="run-results" class="run-results"></div>
+      </section>
+    </main>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

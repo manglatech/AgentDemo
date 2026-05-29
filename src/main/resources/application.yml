@@ -1,0 +1,34 @@
+spring:
+  config:
+    import: optional:classpath:application-local.yml
+
+server:
+  port: 8080
+
+pocs:
+  email-summary:
+    ollama:
+      base-url: http://127.0.0.1:11434
+      model: llama3.2:latest
+    azure:
+      communication:
+        email:
+          enabled: true
+          # connection-string: set in application-local.yml
+          sender: "DoNotReply@05103818-51a6-4061-a970-86beb583e31f.azurecomm.net"
+          recipient: "dhavaly2k@gmail.com"
+          subject: "Multi-Agent Demo Summary"
+
+  crewai-email-summary:
+    python-executable: python3
+    script: pocs/crewai-email-summary/run_crew.py
+    ollama:
+      base-url: http://127.0.0.1:11434/v1
+      model: llama3.2:latest
+    azure:
+      communication:
+        email:
+          enabled: true
+          sender: "DoNotReply@05103818-51a6-4061-a970-86beb583e31f.azurecomm.net"
+          recipient: "dhavaly2k@gmail.com"
+          subject: "Multi-Agent Demo Summary (CrewAI)"

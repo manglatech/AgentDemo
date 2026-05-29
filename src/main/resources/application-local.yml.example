@@ -1,0 +1,12 @@
+# Copy to application-local.yml (gitignored) and paste your connection string.
+pocs:
+  email-summary:
+    azure:
+      communication:
+        email:
+          connection-string: "endpoint=https://<communication-services-resource>.communication.azure.com/;accesskey=<key>"
+  crewai-email-summary:
+    azure:
+      communication:
+        email:
+          connection-string: "endpoint=https://<communication-services-resource>.communication.azure.com/;accesskey=<key>"

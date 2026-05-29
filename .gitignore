@@ -1,0 +1,11 @@
+target/
+src/main/resources/application-local.yml
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.DS_Store
+pocs/**/.venv/
+pocs/**/__pycache__/
+**/*.pyc
